@@ -1,0 +1,7 @@
+version: "3.6"
+
+services:
+  url-shortener:
+    image: "pilaniya1337/urlshortener"
+    ports:
+      - "8080:8080"

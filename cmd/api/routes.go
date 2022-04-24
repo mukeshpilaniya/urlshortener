@@ -13,8 +13,8 @@ func (app *application) routes() http.Handler {
 	mux.Use(middleware.Logger)
 
 	// public routes
-	mux.Post("/api/v1/generate_url", app.generateUrl)
-	mux.Post("/api/v1/fetch_url", app.fetchUrl)
+	mux.Post("/api/v1/generate_shortener_url", app.generateShortenerUrl)
+	mux.Post("/api/v1/fetch_shortener_url", app.generateShortenerUrl)
 
 	return mux
 }
