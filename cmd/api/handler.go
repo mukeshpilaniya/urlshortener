@@ -1,4 +1,4 @@
-package api
+package main
 
 import (
 	"fmt"
@@ -22,4 +22,13 @@ func (app *application) fetchShortenerUrl(w http.ResponseWriter, r *http.Request
 		return
 	}
 	fmt.Println(body)
+}
+
+func (app *application) defaultPage(w http.ResponseWriter, r *http.Request) {
+	body, err := ioutil.ReadAll(r.Body)
+	if err != nil {
+		app.errorLogger.Println(err)
+		return
+	}
+	fmt.Println(string(body))
 }

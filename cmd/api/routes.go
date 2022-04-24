@@ -1,4 +1,4 @@
-package api
+package main
 
 import (
 	"github.com/go-chi/chi"
@@ -15,6 +15,6 @@ func (app *application) routes() http.Handler {
 	// public routes
 	mux.Post("/api/v1/generate_shortener_url", app.generateShortenerUrl)
 	mux.Post("/api/v1/fetch_shortener_url", app.generateShortenerUrl)
-
+	mux.Post("/api/v1/", app.defaultPage)
 	return mux
 }
