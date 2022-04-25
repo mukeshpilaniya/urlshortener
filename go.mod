@@ -1,4 +1,4 @@
-module github.com/mukeshpilaniya/urlshortener.git
+module github.com/mukeshpilaniya/urlshortener
 
 go 1.17
 
